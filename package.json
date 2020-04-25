@@ -1,7 +1,7 @@
 {
-  "name": "{appname}",
+  "name": "uas",
   "version": "1.0.0",
-  "description": "{description}",
+  "description": "User Authentication Service",
   "main": "index.mjs",
   "scripts": {
     "start": "node -r esm index.mjs",
@@ -9,17 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/univuc/{appname}.git"
+    "url": "git+https://github.com/univuc/UAS.git"
   },
   "keywords": [
-    "{appname}"
+    "UAS"
   ],
   "author": "potados99",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/univuc/{appname}/issues"
+    "url": "https://github.com/univuc/UAS/issues"
   },
-  "homepage": "https://github.com/univuc/{appname}#readme",
+  "homepage": "https://github.com/univuc/UAS#readme",
   "dependencies": {
     "@hapi/basic": "^6.0.0",
     "@hapi/boom": "^9.1.0",
