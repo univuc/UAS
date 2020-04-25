@@ -29,8 +29,9 @@ export default {
     web_pw: getEnv('UAS_WEB_PW') || '1234',
 
     invitation: {
-        secret: getEnv('UAS_INVITATION_SECRET') || 'secret',
-        expiresIn: '1m',
+        secret_invitation: getEnv('UAS_INVITATION_SECRET') || 'secret',
+        secret_ticket: getEnv('UAS_TICKET_SECRET') || 'secret2',
+        expire: '1m',
     },
 };
 
