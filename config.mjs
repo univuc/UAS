@@ -22,8 +22,8 @@ import getEnv from './lib/common/utils/env';
 export default {
     port: getEnv('UAS_PORT') || 21100,
 
-    slack_token: getEnv('UAS_SLACK_TOKEN') || 'token',
-    slack_signing_secret: getEnv('UAS_SLACK_SIGNING_SECRET') || 'secret',
+    slack_token: getEnv('UAS_SLACK_TOKEN') || 'token', /* for web api */
+    slack_signing_secret: getEnv('UAS_SLACK_SIGNING_SECRET') || 'secret', /* for event subscription */
 
     web_id: getEnv('UAS_WEB_ID') || 'master',
     web_pw: getEnv('UAS_WEB_PW') || '1234',
