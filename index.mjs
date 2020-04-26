@@ -21,7 +21,12 @@ import createWebServer from './lib/infrastructure/webserver/server';
 import createUserServer from './lib/infrastructure/userserver/server';
 import createAndStartSlackBotServer from './lib/infrastructure/slackbot/server';
 
+import {init} from './lib/common/di/resolve';
+import modules from './lib/common/di/modules';
+
 async function start() {
+    await init(modules);
+
     const webServer = await createWebServer();
     const userServer = await createUserServer();
 
