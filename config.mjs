@@ -25,13 +25,22 @@ export default {
     slack_token: getEnv('UAS_SLACK_TOKEN') || 'token', /* for web api */
     slack_signing_secret: getEnv('UAS_SLACK_SIGNING_SECRET') || 'secret', /* for event subscription */
 
-    web_id: getEnv('UAS_WEB_ID') || 'master',
-    web_pw: getEnv('UAS_WEB_PW') || '1234',
+    auth: {
+        secret: getEnv('UAS_AUTH_SECRET') || 'secret0',
+        expire: '1d',
+        cookie_options: {
+            encoding: 'none', // we already used JWT to encode
+            isSecure: false, // https only?
+            isHttpOnly: true, // prevent client alteration
+            clearInvalid: true, // remove invalid cookies
+            strictHeader: true, // don't allow violations of RFC 6265
+        },
+    },
 
     invitation: {
-        secret_invitation: getEnv('UAS_INVITATION_SECRET') || 'secret',
+        secret_invitation: getEnv('UAS_INVITATION_SECRET') || 'secret1',
         secret_ticket: getEnv('UAS_TICKET_SECRET') || 'secret2',
-        expire: '1m',
+        expire: '5m',
     },
 };
 
