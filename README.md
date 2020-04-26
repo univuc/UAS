@@ -59,5 +59,5 @@ UAS requires these options as environment variables:
 
 ## License
 
-All services of Univ UC are released under GPL v3 license.    
-You can receive a copy of it [here](https://github.com/univuc/UAS/blob/master/LICENSE).
+UAS is released under GPL v3 license.    
+You can receive a full copy of it [here](https://github.com/univuc/UAS/blob/master/LICENSE).
