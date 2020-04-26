@@ -45,6 +45,18 @@ Any service instances running on the same machine can access a central user info
 This is done by a simple HTTP server, serving only for local requests.    
 No token is required.
 
+## Environments
+
+UAS requires these options as environment variables:
+
+- `UAS_WEB_SERVER_PORT`: public web server port.
+- `UAS_USER_SERVER_PORT`: local user repository server port.
+- `UAS_SLACK_TOKEN`: slack token for web api.
+- `UAS_SLACK_SIGNING_SECRET`: a signing secret to authenticate incoming slack event. 
+- **`UAS_AUTH_SECRET`**: secret to sign a login token.
+- `UAS_INVITATION_SECRET`: secret to sign an invitation.
+- `UAS_TICKET_SECRET`: secret to sign a ticket.
+
 ## License
 
 All services of Univ UC are released under GPL v3 license.    
