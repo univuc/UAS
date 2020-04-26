@@ -59,5 +59,5 @@ UAS requires these options as environment variables:
 
 ## License
 
-UAS is released under GPL v3 license.    
+UAS is released under GPL v3.    
 You can receive a full copy of it [here](https://github.com/univuc/UAS/blob/master/LICENSE).
