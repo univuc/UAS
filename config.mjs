@@ -22,12 +22,12 @@ import getEnv from './lib/common/utils/env';
 export default {
     web_server: {
         address: '0.0.0.0',
-        port: getEnv('UAS_WEB_SERVER_PORT') || 9999,
+        port: getEnv('UAS_WEB_SERVER_PORT') || 21100,
     },
 
     user_server: {
         address: 'localhost',
-        port: getEnv('UAS_USER_SERVER_PORT') || 9998,
+        port: getEnv('UAS_USER_SERVER_PORT') || 9999,
     },
 
     slack: {
