@@ -31,6 +31,7 @@
     "axios-cookiejar-support": "^1.0.0",
     "crypto": "^1.0.1",
     "esm": "^3.2.25",
+    "iab": "file:../IAB",
     "jsonwebtoken": "^8.5.1",
     "minimist": "latest",
     "mongodb": "^3.5.6",

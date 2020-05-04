@@ -17,23 +17,16 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import createWebServer from './lib/infrastructure/webserver/server';
-import createUserServer from './lib/infrastructure/userserver/server';
-import createAndStartSlackBotServer from './lib/infrastructure/slackbot/server';
-
-import {init} from './lib/common/di/resolve';
-import modules from './lib/common/di/modules';
+import createServer from './lib/infrastructure/webserver/server';
+import modules from './lib/di/modules';
+import {init} from 'iab/lib/di/resolve';
 
 async function start() {
     await init(modules);
 
-    const webServer = await createWebServer();
-    const userServer = await createUserServer();
+    const webServer = await createServer();
 
     webServer.start();
-    userServer.start();
-
-    createAndStartSlackBotServer();
 }
 
 start();

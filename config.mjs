@@ -17,26 +17,15 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import getEnv from './lib/common/utils/env';
+import getEnv from 'iab/lib/utils/env';
 
 export default {
-    web_server: {
-        address: '0.0.0.0',
-        port: getEnv('UAS_WEB_SERVER_PORT') || 21100,
-    },
-
-    user_server: {
-        address: 'localhost',
-        port: getEnv('UAS_USER_SERVER_PORT') || 9999,
-    },
-
-    slack: {
-        token: getEnv('UAS_SLACK_TOKEN') || 'token', /* for web api */
-        signing_secret: getEnv('UAS_SLACK_SIGNING_SECRET') || 'secret', /* for event subscription */
+    server: {
+        port: getEnv('UAS_PORT'),
     },
 
     auth: {
-        secret: getEnv('UAS_AUTH_SECRET') || 'secret0',
+        secret: getEnv('UNIVUC_SSO_SECRET'),
         expire: '1d',
         cookie_options: {
             encoding: 'none', // we already used JWT to encode
@@ -48,8 +37,8 @@ export default {
     },
 
     invitation: {
-        secret_invitation: getEnv('UAS_INVITATION_SECRET') || 'secret1',
-        secret_ticket: getEnv('UAS_TICKET_SECRET') || 'secret2',
+        secret_invitation: getEnv('UAS_INVITATION_SECRET'),
+        secret_ticket: getEnv('UAS_TICKET_SECRET'),
         expire: '5m',
     },
 };
