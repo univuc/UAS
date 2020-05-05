@@ -41,5 +41,10 @@ export default {
         secret_ticket: getEnv('UAS_TICKET_SECRET'),
         expire: '5m',
     },
+
+    secret: {
+        internal: getEnv('INTERNAL_SECRET'),
+        internal_slack: getEnv('INTERNAL_SLACK_SECRET'),
+    },
 };
 
